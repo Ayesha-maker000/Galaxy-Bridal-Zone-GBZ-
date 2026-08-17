@@ -1,0 +1,6 @@
+{
+  "name": "Galaxy Bridal Zone By Kahkishan Ali",
+  "description": "Premier salon by Kahkishan Ali offering bespoke hair cuts and treatments, hydra facials, bridal makeup, mani-pedi, and waxing rituals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

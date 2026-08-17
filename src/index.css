@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-playfair: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF8F5;
+    color: #2C2523;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  h1, h2, h3, h4, .font-playfair {
+    font-family: var(--font-playfair);
+  }
+}
+
+/* Desktop Custom Soft Scrollbar */
+@media (min-width: 769px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF8F5;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D5C9BE;
+    border-radius: 6px;
+    border: 2px solid #FAF8F5;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8E2C34;
+  }
+}
+
+/* Hide scrollbar completely on mobile screens (phones & touch viewports) */
+@media (max-width: 768px) {
+  html, body, #root, * {
+    -ms-overflow-style: none !important; /* IE and Edge */
+    scrollbar-width: none !important; /* Firefox */
+  }
+  ::-webkit-scrollbar {
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+    background: transparent !important;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.soft-card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(44, 37, 35, 0.05), 0 2px 6px -1px rgba(44, 37, 35, 0.03);
+}
+
+.soft-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.soft-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(44, 37, 35, 0.09), 0 4px 10px -2px rgba(44, 37, 35, 0.04);
+}
